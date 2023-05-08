@@ -9,61 +9,29 @@ import UIKit
 
 class QuestionViewController: UIViewController {
 
-    @IBOutlet weak var questionLabel: UILabel!
+    @IBOutlet var questionLabel: UILabel!
+    
+    @IBOutlet var SingleStackView: UIStackView!
+    @IBOutlet var singleButton1: UIButton!
+    @IBOutlet var singleButton2: UIButton!
+    @IBOutlet var singleButton3: UIButton!
+    @IBOutlet var singleButton4: UIButton!
     
     
+    @IBOutlet var MultipleStackView: UIStackView!
+    @IBOutlet var multiLabel1: UILabel!
+    @IBOutlet var multiLabel2: UILabel!
+    @IBOutlet var multiLabel3: UILabel!
+    @IBOutlet var multiLabel4: UILabel!
     
-    @IBOutlet weak var SingleStackView: UIStackView!
+    @IBOutlet var RangedStackView: UIStackView!
+    @IBOutlet var rangedLabe1: UILabel!
+    @IBOutlet var rangedLabel2: UILabel!
     
-    @IBOutlet weak var singleButton1: UIButton!
-    
-    
-    @IBOutlet weak var singleButton2: UIButton!
-    
-    
-    
-    @IBOutlet weak var singleButton3: UIButton!
-    
-    
-    @IBOutlet weak var singleButton4: UIButton!
+    @IBOutlet var questionProgressView: UIProgressView!
     
     
-    
-    @IBOutlet weak var MultipleStackView: UIStackView!
-    
-    
-    @IBOutlet weak var multiLabel1: UILabel!
-    
-    
-    @IBOutlet weak var multiLabel2: UILabel!
-    
-    
-    
-    @IBOutlet weak var multiLabel3: UILabel!
-    
-    
-    @IBOutlet weak var multiLabel4: UILabel!
-    
-    
-    
-    
-    @IBOutlet weak var RangedStackView: UIStackView!
-    
-    
-    
-    @IBOutlet weak var rangedLabe1: UILabel!
-    
-    
-    @IBOutlet weak var rangedLabel2: UILabel!
-    
-    
-    @IBOutlet weak var questionProgressView: UIProgressView!
-    
-    
-    
-    
-    
-        var questionIndex = 0
+    var questionIndex = 0
     
     
     func nextQuestion() {
@@ -82,14 +50,17 @@ class QuestionViewController: UIViewController {
         
     }
            
-        var questions: [Question] = [
-               
-               Question(text: "Which food do you like most?", type: .single, answers: [
-                   Answer(text: "Steak", type: .dog),
-                   Answer(text: "Fish", type: .cat),
-                   Answer(text: "Corn", type: .turtle),
-                   Answer(text: "Carrots", type: .rabbit)
-               ]),
+    var questions: [Question] = [
+        Question(
+            text: "Which food do you like most?",
+            type: .single,
+            answers: [
+                Answer(text: "Steak", type: .dog),
+                Answer(text: "Fish", type: .cat),
+                Answer(text: "Corn", type: .turtle),
+                Answer(text: "Carrots", type: .rabbit)
+               ]
+        ),
                
                Question(text: "Which activities do you enjoy?", type: .multiple, answers: [
                    Answer(text: "Swimming", type: .turtle),
